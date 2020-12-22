@@ -1,0 +1,13 @@
+<div *ngIf = "searchByName != ''">
+
+    <h1>Search Result</h1>
+    
+    <div *ngFor="let item of searchedOutput | keyvalue">
+        <b>{{item.key}}</b> : <b>{{item.value}}</b>
+    </div>
+</div>
+
+<h2>Original List</h2>
+<ul>
+    <li (click) = "showName(i.name)" *ngFor = "let i of userList">{{i.name}}</li>
+</ul>
